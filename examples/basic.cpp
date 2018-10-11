@@ -1,6 +1,8 @@
 #define _USE_MATH_DEFINES
+
 #include <iostream>
 #include <cml/math.h>
+
 #include "../matplotlibcpp.h"
 
 namespace plt = matplotlibcpp;
@@ -12,8 +14,8 @@ int main()
     std::vector<double> x(n), y(n), z(n), w(n,2);
     for (int i = 0; i < n; ++i) 
     {
-        x.at(i) = i*i;
-        y.at(i) = cml_sin(2*M_PI*i/360.0);
+        x.at(i) = i * i;
+        y.at(i) = cml_sin(2 * M_PI * i / 360.0);
         z.at(i) = cml_log(i);
     }
     
@@ -39,7 +41,8 @@ int main()
     plt::legend();
 
     // save figure
-    const char* filename = "./basic.png";
+    const char *filename = "./basic.png";
+
     std::cout << "Saving result to " << filename << std::endl;;
     plt::save(filename);
 }

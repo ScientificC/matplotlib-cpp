@@ -1,6 +1,6 @@
 #define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <cml/math.h>
 #include "../matplotlibcpp.h"
 
 namespace plt = matplotlibcpp;
@@ -10,10 +10,11 @@ int main()
     // Prepare data.
     int n = 5000;
     std::vector<double> x(n), y(n), z(n), w(n,2);
-    for(int i=0; i<n; ++i) {
+    for (int i = 0; i < n; ++i) 
+    {
         x.at(i) = i*i;
-        y.at(i) = sin(2*M_PI*i/360.0);
-        z.at(i) = log(i);
+        y.at(i) = cml_sin(2*M_PI*i/360.0);
+        z.at(i) = cml_log(i);
     }
     
     // Set the size of output image = 1200x780 pixels

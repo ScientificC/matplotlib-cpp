@@ -22,4 +22,4 @@ xkcd: examples/xkcd.cpp matplotlibcpp.h
 	cd examples && g++ xkcd.cpp -I/usr/lib/python3.7/site-packages/numpy/core/include -I/usr/include/python3.7m -lpython3.7m -lcml -o xkcd.o -std=c++11
 
 clean:
-	rm -f examples/{minimal,basic,modern,animation,nonblock,xkcd,quiver}
+	rm -f examples/{minimal.o,basic.o,modern.o,animation.o,nonblock.o,xkcd.o,quiver.o}
